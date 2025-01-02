@@ -1,0 +1,40 @@
+<app-navigation></app-navigation>
+<div class="booking-container">
+    <h2>Book Your Event</h2>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="eventName">Event Name:</label>
+        <input id="eventName" formControlName="eventName" type="text">
+        <div *ngIf="bookingForm.get('eventName')?.invalid && bookingForm.get('eventName')?.touched" class="error-message">
+          Event Name is required
+        </div>
+      </div>
+  
+      <div>
+        <label for="venue">Venue:</label>
+        <input id="venue" formControlName="venue" type="text">
+        <div *ngIf="bookingForm.get('venue')?.invalid && bookingForm.get('venue')?.touched" class="error-message">
+          Venue is required
+        </div>
+      </div>
+  
+      <div>
+        <label for="time">Time:</label>
+        <input id="time" formControlName="time" type="datetime-local">
+        <div *ngIf="bookingForm.get('time')?.invalid && bookingForm.get('time')?.touched" class="error-message">
+          Time is required
+        </div>
+      </div>
+  
+      <div>
+        <label for="duration">Duration (hours):</label>
+        <input id="duration" formControlName="duration" type="number" step="0.1">
+        <div *ngIf="bookingForm.get('duration')?.invalid && bookingForm.get('duration')?.touched" class="error-message">
+          Duration is required and should be at least 0.5 hours
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="bookingForm.invalid">Proceed</button>
+    </form>
+  </div>
+  
