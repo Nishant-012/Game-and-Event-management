@@ -1,0 +1,53 @@
+<!-- <app-navigation></app-navigation>
+<div class="container">
+    <h1>Create Group</h1>
+    <form (ngSubmit)="onSubmit()" class="group-form">
+      <div class="form-group">
+        <label for="name">Group Name:</label>
+        <input type="text" id="name" [(ngModel)]="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="users">Users:</label>
+        <div *ngFor="let user of users; let i = index">
+          <input type="text" [(ngModel)]="user.username" name="username{{i}}" placeholder="Username" required>
+          <input type="number" [(ngModel)]="user.id" name="id{{i}}" placeholder="User ID" required>
+          <button type="button" (click)="removeUser(i)">Remove</button>
+          <button type="button" (click)="followUser(user)">Follow</button>
+        </div>
+        <button type="button" (click)="addUser()">Add User</button>
+      </div>
+      <button type="submit" class="btn btn-primary">Create Group</button>
+    </form>
+  </div>
+  -->
+
+  <app-navigation></app-navigation>
+
+<div class="container">
+  <h1>Create Group</h1>
+  <form (ngSubmit)="onSubmit()" class="group-form">
+    <div class="form-group">
+      <label for="name">Group Name:</label>
+      <input type="text" id="name" [(ngModel)]="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="users">Users:</label>
+      <div *ngFor="let user of users; let i = index">
+        <input type="text" [(ngModel)]="user.username" name="username{{i}}" placeholder="Username" required>
+        <input type="number" [(ngModel)]="user.id" name="id{{i}}" placeholder="User ID" required>
+        <button type="button" (click)="removeUser(i)">Remove</button>
+        <button type="button" (click)="followUser(user)">Follow</button>
+      </div>
+      <button type="button" (click)="addUser()">Add User</button>
+      <div *ngIf="users.length > 10" class="error-message">
+        You cannot add more than 10 users.
+      </div>
+      <div *ngIf="users.length < 2 && users.length > 0" class="error-message">
+        You need to add at least 2 users to create a group.
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Group</button>
+  </form>
+</div>
+
+   
