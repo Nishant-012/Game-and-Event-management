@@ -1,0 +1,73 @@
+/* Container for the form and user list */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #020202;
+  color: white;
+}
+h1{
+  text-align: center;
+}
+
+/* Left and right side sections */
+.left-side, .right-side {
+  width: 45%;
+}
+
+/* Style for form labels */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Style for form inputs */
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style for error messages */
+.form-container .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+
+/* Style for buttons */
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:disabled {
+  background-color: #ccc;
+}
+
+/* Style for user list */
+.right-side button {
+  background-color: #28a745;
+}
+
+.right-side div p {
+  margin: 5px 0;
+}

@@ -1,0 +1,135 @@
+<!-- <div class="form-container">
+    <div class="left-side">
+      <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+        <label for="name">Team Name:</label>
+        <input id="name" formControlName="name" type="text">
+        <div *ngIf="teamForm.get('name')?.invalid && teamForm.get('name')?.touched" class="error-message">
+          Team name is required
+        </div>
+  
+        <label for="eventId">Event ID:</label>
+        <input id="eventId" formControlName="eventId" type="number">
+        <div *ngIf="teamForm.get('eventId')?.invalid && teamForm.get('eventId')?.touched" class="error-message">
+          Valid event ID is required
+        </div>
+  
+        <label for="userIds">User IDs:</label>
+        <div formArrayName="userIds">
+          <div *ngFor="let userId of userIds.controls; let i = index">
+            <input [formControlName]="i" type="number">
+            <button type="button" (click)="removeUserId(i)">Remove</button>
+          </div>
+        </div>
+        <button type="button" (click)="addUserId(0)" [disabled]="userIds.length >= 10">Add User ID</button>
+        <div *ngIf="userIds.invalid && userIds.touched" class="error-message">
+          You can add up to 10 user IDs
+        </div>
+  
+        <button type="submit" [disabled]="teamForm.invalid">Create Team</button>
+      </form>
+    </div>
+  
+    <div class="right-side">
+      <button (click)="getUsers()">Get Users</button>
+      <div *ngIf="users">
+        <div *ngFor="let user of users">
+          <p>{{ user.id }}: {{ user.name }} - {{ user.email }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+   <!-- <div class="form-container">
+    <div class="left-side">
+      <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+        <label for="name">Team Name:</label>
+        <input id="name" formControlName="name" type="text">
+        <div *ngIf="teamForm.get('name')?.invalid && teamForm.get('name')?.touched" class="error-message">
+          Team name is required
+        </div>
+  
+        <label for="eventId">Event ID:</label>
+        <input id="eventId" formControlName="eventId" type="number">
+        <div *ngIf="teamForm.get('eventId')?.invalid && teamForm.get('eventId')?.touched" class="error-message">
+          Valid event ID is required
+        </div>
+  
+        <label for="userIds">User IDs:</label>
+        <div formArrayName="userIds">
+          <div *ngFor="let userId of userIds.controls; let i = index">
+            <input [formControlName]="i" type="number">
+            <button type="button" (click)="removeUserId(i)">Remove</button>
+          </div>
+        </div>
+        <button type="button" (click)="addUserId(0)" [disabled]="userIds.length >= 10">Add User ID</button>
+        <div *ngIf="userIds.invalid && userIds.touched" class="error-message">
+          You can add up to 10 user IDs
+        </div>
+  
+        <button type="submit" [disabled]="teamForm.invalid">Create Team</button>
+      </form>
+    </div>
+  
+    <div class="right-side">
+      <button (click)="getUsers()">Get Users</button>
+      <div *ngIf="users">
+        <div *ngFor="let user of users">
+          <p>ID: {{ user.id }}</p>
+          <p>Username: {{ user.username }}</p>
+          <p>Followers: {{ user.followers }}</p>
+          <p>Groups: {{ user.groups.join(', ') }}</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <app-navigation></app-navigation>
+  <h1>Teams</h1>
+  <div class="form-container">
+    <div class="left-side">
+      <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+        <label for="name">Team Name:</label>
+        <input id="name" formControlName="name" type="text">
+        <div *ngIf="teamForm.get('name')?.invalid && teamForm.get('name')?.touched" class="error-message">
+          Team name is required
+        </div>
+  
+        <label for="eventId">Event ID:</label>
+        <input id="eventId" formControlName="eventId" type="number">
+        <div *ngIf="teamForm.get('eventId')?.invalid && teamForm.get('eventId')?.touched" class="error-message">
+          Valid event ID is required
+        </div>
+  
+        <label for="userIds">User IDs:</label>
+        <div formArrayName="userIds">
+          <div *ngFor="let userId of userIds.controls; let i = index">
+            <input [formControlName]="i" type="number">
+            <button type="button" (click)="removeUserId(i)">Remove</button>
+          </div>
+        </div>
+        <button type="button" (click)="addUserId(0)" [disabled]="userIds.length >= 10">Add User ID</button>
+        <div *ngIf="userIds.invalid && userIds.touched" class="error-message">
+          You can add up to 10 user IDs
+        </div>
+  
+        <button type="submit" [disabled]="teamForm.invalid">Create Team</button>
+      </form>
+    </div>
+  
+    <div class="right-side">
+      <button (click)="getUsers()">Get Users</button>
+      <div *ngIf="users">
+        <div *ngFor="let user of users">
+          <p>ID: {{ user.id }}</p>
+          <p>Username: {{ user.username }}</p>
+          <p>Followers: {{ user.followers }}</p>
+          <p>Groups: {{ user.groups.join(', ') }}</p>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
