@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <ul>
+      <li><a routerLink="/group">Group</a></li>
+      <li><a routerLink="/teams/new">Team</a></li>
+      <li><a routerLink="/feedback">Feedback</a></li>
+      <li><a routerLink="/attendance">Attendence</a></li>
+      <li><a routerLink="/booking">Booking</a></li>
+      <li *ngIf="isAdmin"><a routerLink="/register">Register</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  
