@@ -1,0 +1,80 @@
+.right-component {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #0a0a0a;
+    color: white;
+  }
+  
+  .right-component h2, .right-component h3 {
+    text-align: center;
+  }
+  
+  .right-component p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .payment-mode {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .payment-mode label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    color: black;
+  }
+  
+  .payment-options {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .payment-options label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .card-details input, .upi-details input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .confirm-btn {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .note {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    color: gray;
+  }
+  

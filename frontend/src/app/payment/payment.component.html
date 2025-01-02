@@ -1,0 +1,65 @@
+
+<div class="right-component">
+    <h2>Payment Details</h2>
+    <div class="appointment-details">
+    </div>
+    <div class="payment-mode">
+        <h3>Payment Mode</h3>
+        <label>
+            <input type="radio" name="payment" value="pay-at-place" > Pay at Place 
+        </label>
+        <label>
+            <input type="radio" name="payment" value="pay-online"  checked> Pay Online
+        </label>
+        <div class="payment-options">
+            
+            <label>
+                <input type="radio" name="payment-method" value="card"  checked> Credit/Debit Cards
+            </label>
+            <div class="card-details" *ngIf="paymentMethod === 'card'">
+                <input type="text" placeholder="Card number" >
+                <input type="text" placeholder="MM/YY" >
+                <input type="text" placeholder="CVV" >
+            </div>
+            <div class="upi-details" *ngIf="paymentMethod === 'upi'">
+                <input type="text" placeholder="UPI ID" >
+            </div>
+        </div>
+    </div>
+    <button class="confirm-btn" (click)="confirmPayment()">Confirm</button>
+    <p class="note">We will send appointment-related communications to your number and email.</p>
+</div>
+<!-- <div class="right-component">
+    <h2>Details</h2>
+    <div class="appointment-details">
+        
+    </div>
+    <div class="payment-mode">
+        <h3>Payment Mode</h3>
+        <label>
+            <input type="radio" name="payment" value="pay-at-place" [(ngModel)]="paymentMode"> Pay at Place ₹600
+        </label>
+        <label>
+            <input type="radio" name="payment" value="pay-online" [(ngModel)]="paymentMode" checked> Pay Online ₹600
+        </label>
+        <div class="payment-options">
+            <label>
+                <input type="radio" name="payment-method" value="upi" [(ngModel)]="paymentMethod"> Pay via UPI
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="card" [(ngModel)]="paymentMethod" checked> Credit/Debit Cards
+            </label>
+            <div class="card-details" *ngIf="paymentMethod === 'card'">
+                <input type="text" placeholder="Card number" [(ngModel)]="cardNumber">
+                <input type="text" placeholder="MM/YY" [(ngModel)]="expiryDate">
+                <input type="text" placeholder="CVV" [(ngModel)]="cvv">
+            </div>
+            <div class="upi-details" *ngIf="paymentMethod === 'upi'">
+                <input type="text" placeholder="UPI ID" [(ngModel)]="upiId">
+            </div>
+        </div>
+    </div>
+    <button class="confirm-btn" (click)="confirmPayment()">Confirm</button>
+    <p class="note">We will send appointment-related communications to your number and email.</p>
+</div>
+</div> -->
