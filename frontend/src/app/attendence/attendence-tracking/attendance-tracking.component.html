@@ -1,0 +1,11 @@
+<app-navigation></app-navigation>
+<div class="attendance-container">
+    <h1>Attendance Tracking for Player</h1>
+    <p>Please enter your user ID:</p>
+    <form [formGroup]="attendanceForm" (ngSubmit)="onSubmit()">
+      <input formControlName="userId" type="text" placeholder="User ID">
+      <button type="submit" [disabled]="attendanceForm.invalid">Attendance</button>
+    </form>
+    <div *ngIf="message" class="message">{{ message }}</div>
+  </div>
+  

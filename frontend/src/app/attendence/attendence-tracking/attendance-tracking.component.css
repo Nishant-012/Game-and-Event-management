@@ -1,0 +1,55 @@
+.attendance-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #131212;
+    color: white;
+  }
+  
+  .attendance-container h1 {
+    text-align: center;
+  }
+  
+  .attendance-container p {
+    text-align: center;
+  }
+  
+  .attendance-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .attendance-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .attendance-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2b0d8e;
+    border: none;
+    border-radius: 5px;
+    color: rgb(16, 4, 65);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .attendance-container button:disabled {
+    background-color: #ccc;
+  }
+  
+  .message {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
